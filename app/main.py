@@ -81,3 +81,7 @@ class ResponseTodoList(BaseModel):
 @app.get("/echo", tags=["echo"])
 def get_echo(message: str, name: str):
     return {"Message": f"{message} {name}!"}
+
+@app.get("/health", tags=["System"])
+def get_health():
+    return {"status": "ok"}
